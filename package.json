@@ -1,0 +1,27 @@
+{
+  "name": "get-rekt",
+  "version": "1.0.0",
+  "description": "ReactJS CLI",
+  "main": "index.js",
+  "bin": {
+    "rkt": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^5.1.0",
+    "figlet": "^1.4.0",
+    "inquirer": "^7.2.0"
+  },
+  "husky": { "hooks": { "pre-commit": "pretty-quick --staged" } },
+  "devDependencies": {
+    "eslint": "^7.3.0",
+    "husky": "^4.2.5",
+    "prettier": "2.0.5",
+    "pretty-quick": "^2.0.1"
+  }
+}
