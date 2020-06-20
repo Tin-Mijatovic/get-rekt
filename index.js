@@ -3,20 +3,21 @@ const inquirer = require("inquirer");
 const figlet = require("figlet");
 const chalk = require("chalk");
 
-console.log("CLI Started");
+figlet("GET REKT", (err, data) => {
+  if (err) {
+    console.log("Something went wrong...");
+    console.dir(err);
+    return;
+  }
+  console.log(chalk.cyan.bold(data));
 
-program
-  .command('com <name>')
-  .description('Create a ReactJS component')
-  .action((name) => {
-    console.log(`Component created: ${name}`);
-  });
+  program.option('-c, --component <name>', 'Create React component')
+  program.option('-t, --container <name>', 'Create React container')
 
-program
-  .command('con <name>')
-  .description('Create a ReactJS container')
-  .action((name) => {
-    console.log(`Container created: ${name}`);
-  });
-program.parse(process.argv);
+  program.parse(process.argv);
+  if(program.component) console.log('Create Component')
+  else if(program.container) console.log('Create Container')
+  else
+    console.log('No args')
 
+});
