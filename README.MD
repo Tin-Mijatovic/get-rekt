@@ -4,8 +4,6 @@ Get-Rekt is a simple React CLI that makes creating components and containers eas
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
 ```
 yarn add get-rekt --dev
 ```
