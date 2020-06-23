@@ -29,13 +29,13 @@ else {
           type: "list",
           name: "create",
           message: "What would you like to create?",
-          choices: ["Component", "Container"]
+          choices: ["Component", "Container"],
         },
         {
           type: "list",
           name: "type",
           message: "What type do you want?",
-          choices: ["functional", "class"]
+          choices: ["functional", "class"],
         },
         {
           type: "input",
@@ -43,10 +43,10 @@ else {
           message: "What name would you like?",
           default: function () {
             return "NewComponent";
-          }
-        }
+          },
+        },
       ])
-      .then(answers => {
+      .then((answers) => {
         if (answers.create === "Component") {
           functions.generateComponent(answers.name, answers.type);
         } else {
