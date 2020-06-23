@@ -35,7 +35,7 @@ else {
           type: "list",
           name: "type",
           message: "What type do you want?",
-          choices: ["Functional", "Class"]
+          choices: ["functional", "class"]
         },
         {
           type: "input",
@@ -47,7 +47,11 @@ else {
         }
       ])
       .then(answers => {
-        console.log(JSON.stringify(answers, null, "  "));
+        if (answers.create === "Component") {
+          functions.generateComponent(answers.name, answers.type);
+        } else {
+          functions.generateContainer(answers.name, answers.type);
+        }
       });
   });
 }

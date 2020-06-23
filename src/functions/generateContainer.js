@@ -6,11 +6,11 @@ const chalk = require("chalk");
 module.exports = (name, type = "functional") => {
   let compiledHandlebars = Handlebars.compile(template[type]);
   let compiledIndex = Handlebars.compile(template.index);
-  if (fs.existsSync(`srcTest/containers`)) {
-    if (!fs.existsSync(`srcTest/containers/${name}`)) {
-      fs.mkdirSync(`srcTest/containers/${name}`);
+  if (fs.existsSync(`src/containers`)) {
+    if (!fs.existsSync(`src/containers/${name}`)) {
+      fs.mkdirSync(`src/containers/${name}`);
       fs.writeFile(
-        `srcTest/containers/${name}/${name}.js`,
+        `src/containers/${name}/${name}.js`,
         compiledHandlebars({ name }),
         err => {
           if (err) {
@@ -20,7 +20,7 @@ module.exports = (name, type = "functional") => {
         }
       );
       fs.writeFile(
-        `srcTest/containers/${name}/index.js`,
+        `src/containers/${name}/index.js`,
         compiledIndex({ name }),
         err => {
           if (err) {
@@ -29,6 +29,7 @@ module.exports = (name, type = "functional") => {
           }
         }
       );
+      console.log(chalk.green(`Container ${name} created!`));
     } else {
       console.log(chalk.black.bgRed(" ERROR "));
       console.log(chalk.yellowBright("Component with that name alredy exists"));
