@@ -1,6 +1,6 @@
 # Intro
 
-Get-Rekt is a simple React CLI that makes creating components and containers easyer.
+Get-Rekt is a simple React CLI that makes creating components and containers easier.
 
 ## Installation
 
