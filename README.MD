@@ -18,7 +18,7 @@ Type "rkt" to open get-rekt menu
 or use shordcuts
 ```
 rkt --init (rkt -i) : creates "src/components" and "src/containers"
-rkt --component (rkt -c) : Create component
-rkt --container (rkt -t) : Creates container
+rkt --component <name> ( rkt -c <name> ) : Create component
+rkt --container <name> ( rkt -t <name> ) : Creates container
 ```
 
