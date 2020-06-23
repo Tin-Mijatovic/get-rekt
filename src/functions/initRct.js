@@ -1,24 +1,24 @@
 const fs = require("fs");
 module.exports = () => {
-  fs.access("src/containers", error => {
+  fs.access("srcTest/containers", error => {
     if (error) {
-      if (!fs.existsSync("src")) {
-        fs.mkdirSync("src");
+      if (!fs.existsSync("srcTest")) {
+        fs.mkdirSync("srcTest");
       }
-      if (!fs.existsSync("src/containers")) {
-      fs.mkdirSync("src/containers");
+      if (!fs.existsSync("srcTest/containers")) {
+      fs.mkdirSync("srcTest/containers");
       }
     } else {
       console.log("File alredy exists");
     }
   });
-  fs.access("src/components", error => {
+  fs.access("srcTest/components", error => {
     if (error) {
-      if (!fs.existsSync("src")) {
-        fs.mkdirSync("src");
+      if (!fs.existsSync("srcTest")) {
+        fs.mkdirSync("srcTest");
       }
-      if (!fs.existsSync("src/components")) {
-      fs.mkdirSync("src/components");
+      if (!fs.existsSync("srcTest/components")) {
+      fs.mkdirSync("srcTest/components");
       }
     } else {
       console.log("File alredy exists");

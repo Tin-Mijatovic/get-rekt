@@ -11,8 +11,8 @@ program.option("-t, --container <name>", "Create React container");
 program.option("-i, --init", "Initialize RKT");
 
 program.parse(process.argv);
-if (program.component) functions.generateComponent();
-else if (program.container) functions.generateContainer();
+if (program.component) functions.generateComponent(program.component);
+else if (program.container) functions.generateContainer(program.container);
 else if (program.init) functions.init();
 else {
   figlet("GET REKT", (err, data) => {
