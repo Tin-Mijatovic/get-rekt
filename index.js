@@ -4,7 +4,7 @@ const { program } = require("commander");
 const inquirer = require("inquirer");
 const figlet = require("figlet");
 const chalk = require("chalk");
-const functions = require("./functions");
+const functions = require("./src/functions");
 
 program.option("-c, --component <name>", "Create React component");
 program.option("-t, --container <name>", "Create React container");

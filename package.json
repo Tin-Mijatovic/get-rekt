@@ -16,7 +16,7 @@
   },
   "main": "index.js",
   "bin": {
-    "rkt": "src/index.js"
+    "rkt": "index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
