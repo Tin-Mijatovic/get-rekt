@@ -15,7 +15,7 @@ npm install --save-dev get-rekt
 ```
 Type "rkt" to open get-rekt menu
 ```
-or use shordcuts
+or use shortcuts
 ```
 rkt --init (rkt -i) : creates "src/components" and "src/containers"
 rkt --component <name> ( rkt -c <name> ) : Create component
