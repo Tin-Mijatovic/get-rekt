@@ -5,10 +5,10 @@ Get-Rekt is a simple React CLI that makes creating components and containers eas
 ## Installation
 
 ```
-yarn add get-rekt --dev
+yarn global add get-rekt
 ```
 ```
-npm install --save-dev get-rekt
+npm install get-rekt -g
 ```
 
 ## Usage
