@@ -12,6 +12,10 @@ npm install get-rekt -g
 ```
 
 ## Usage
+
+![SuperAwesomeGif](https://imgur.com/a/xxioB2k)
+
+
 ```
 Type "rkt" to open get-rekt menu
 ```
