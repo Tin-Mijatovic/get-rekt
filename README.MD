@@ -13,7 +13,7 @@ npm install get-rekt -g
 
 ## Usage
 
-![SuperAwesomeGif](https://imgur.com/a/xxioB2k)
+![SuperAwesomeGif](https://imgur.com/a/xxioB2k.gif)
 
 
 ```
