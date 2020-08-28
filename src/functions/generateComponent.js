@@ -4,6 +4,7 @@ const template = require("../templates/templates.js");
 const chalk = require("chalk");
 
 module.exports = (name, type = "functional") => {
+  console.log("test");
   let compiledHandlebars = Handlebars.compile(template[type]);
   let compiledIndex = Handlebars.compile(template.index);
   if (fs.existsSync(`src/components`)) {
@@ -12,7 +13,7 @@ module.exports = (name, type = "functional") => {
       fs.writeFile(
         `src/components/${name}/${name}.js`,
         compiledHandlebars({ name }),
-        err => {
+        (err) => {
           if (err) {
             console.log(chalk.black.bgRed(" ERROR "));
             console.log(chalk.red.bold(`Can not create ${name}`));
@@ -22,7 +23,7 @@ module.exports = (name, type = "functional") => {
       fs.writeFile(
         `src/components/${name}/index.js`,
         compiledIndex({ name }),
-        err => {
+        (err) => {
           if (err) {
             console.log(chalk.black.bgRed(" ERROR "));
             console.log(chalk.red.bold("Can not create index.js"));
