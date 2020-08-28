@@ -4,7 +4,6 @@ const template = require("../templates/templates.js");
 const chalk = require("chalk");
 
 module.exports = (name, type = "functional") => {
-  console.log("test");
   let compiledHandlebars = Handlebars.compile(template[type]);
   let compiledIndex = Handlebars.compile(template.index);
   if (fs.existsSync(`src/components`)) {
